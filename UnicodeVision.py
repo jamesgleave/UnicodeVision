@@ -5,7 +5,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--mode", help="The mode of the conversion. This can be either s (stream) or u (upload)",
-                        required=True)
+                        required=False, default='s')
     parser.add_argument("--path", help="The absolute path leading to a video or image",
                         required=False)
     parser.add_argument("--scale", help="The scale of the image.",

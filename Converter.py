@@ -5,6 +5,7 @@ import numpy as np
 from PIL import Image
 from numpy import ndarray
 from os import system
+from Colours import Colours as c
 
 
 class Converter:
@@ -12,6 +13,7 @@ class Converter:
         self.frames = []
         # self.reprs = ["X ", "x "]
         self.reprs = ["  ", ". ", ", ", "; ", "o ", "@ ", "* ", "0 ", "# "]
+        self.colours = ["", c.red, c.blue, c.purple]
         self.framerate = framerate
         self.terminal_size = self.get_terminal_size()
 
@@ -141,7 +143,6 @@ class Converter:
 
                 # Add the character to the frame
                 frame += self.reprs[mapped_index]
-
             frame += "\n"
 
         self.frames.append(frame)
@@ -186,7 +187,6 @@ class Converter:
 
     @staticmethod
     def get_terminal_size():
-        import os
         env = os.environ
 
         def ioctl_GWINSZ(fd):
@@ -209,11 +209,6 @@ class Converter:
         if not cr:
             cr = (env.get('LINES', 25), env.get('COLUMNS', 80))
 
-            ### Use get(key[, default]) instead of a try/catch
-            # try:
-            #    cr = (env['LINES'], env['COLUMNS'])
-            # except:
-            #    cr = (25, 80)
         return int(cr[1]), int(cr[0])
 
 
