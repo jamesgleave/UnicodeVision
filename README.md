@@ -29,7 +29,6 @@ There are many arguments to play with:
 python3 UnicodeVision.py  --mode s --scale 0.07 --contrast 1 --sharpen 1 --invert False
 ```
 
-#Just Have Fun!
 ![plot](./Assets/Media/SC1.png)
 ![plot](./Assets/Media/gif.gif)
 
