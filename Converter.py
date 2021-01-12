@@ -11,7 +11,6 @@ from Colours import Colours as c
 class Converter:
     def __init__(self, framerate=30):
         self.frames = []
-        # self.reprs = ["X ", "x "]
         self.reprs = ["  ", ". ", ", ", "; ", "o ", "@ ", "* ", "0 ", "# "]
         self.colours = ["", c.red, c.blue, c.purple]
         self.framerate = framerate
@@ -210,17 +209,3 @@ class Converter:
             cr = (env.get('LINES', 25), env.get('COLUMNS', 80))
 
         return int(cr[1]), int(cr[0])
-
-
-# converter = Converter(framerate=30)
-# converter.convert_video("Random stuff/Sami.mp4",
-#                         0.06, 3, 1.1,  False, rotation=-90)
-# converter.play_video()
-#
-# converter = Converter(framerate=30)
-# converter.convert_video("Random stuff/riley2.mp4",
-#                         0.065, 3, 1, True, rotation=0)
-# converter.play_video()
-
-# converter = Converter()
-# converter.live_stream(invert=False)

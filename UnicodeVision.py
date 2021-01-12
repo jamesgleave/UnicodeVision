@@ -60,6 +60,5 @@ if __name__ == '__main__':
             elif mime_start == 'image':
                 converter.convert_image(args.path, size_ratio, contrast, sharpen, invert, rotate, autoscale)
 
-
         converter.show()
 
